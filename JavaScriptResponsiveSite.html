@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce Website</title>
+
+        <link rel="stylesheet" type="text/css" href="styles.css"> <!-- call to external styles-->
+
+        <style>
+            * {
+            box-sizing: border-box;
+        }
+            h1{
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 3vw;
+            }
+            table, th, td {
+            border:1px solid black;
+            } 
+            nav ul {
+            display: flex;
+            justify-content: space-between; /* Spread the links evenly */
+            list-style: none; /* Remove default list styles */            
+            }
+            li {
+            display: flex;
+            align-items: center; /* Vertically align the content */
+        }
+            a {
+               
+                padding: 20px; /* Add some spacing between links */
+            }
+
+        /* Example of a media query for tablets */
+        @media screen and (max-width: 800px) {
+            nav ul {
+                flex-direction: column; /* Collapse the links into a single column */
+                align-items: center; /* Center the links horizontally */
+            }
+        }
+            </style>
+            <!-- internal styles-->
+
+    </head>
+
+    <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+        </script>
+        
+    <body>
+        <nav>
+            <ul id="navbar">
+                <li><a href="ResponsiveWebsite.html" class="left" >Home</a></li>
+                <li><a href="#" class="mid" >Store</a></li>
+                <li><a href="#" class="right" >Contact</a></li>
+            </ul>
+        </nav>
+        <img src="Anabolic Lifestyle-logo.png" class="logo" alt="Test Logo"  
+                    style=" display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 50%;
+                    height:auto;">
+        
+        <section id="main-content">
+            <h2>String Methods</h2>
+            <p>This Is the String That Will Be Modified</p>
+            <b>Length of string: </b>
+            <p id="length"></p>
+            <script>
+                let text = "This Is the String That Will Be Modified"; 
+                document.getElementById("length").innerHTML = text.length;
+            </script>
+
+            <b>Sliced/Extracted part of the string: </b>
+            <p id="slice"></p>
+            <script>
+                let part = text.slice(12,23);
+                document.getElementById("slice").innerHTML = part; 
+            </script>
+
+            <b>String Substr: </b>
+            <p id="substr"></p>
+            <script>
+                let substring = text.substr(17, 5);
+                document.getElementById("substr").innerHTML = substring; 
+            </script>
+
+            <b>Replace part of String: </b>
+            <p id="replaced"></p>
+            <script>
+                let replaced = text.replace("Modified", "Changed");
+                document.getElementById("replaced").innerHTML = replaced; 
+            </script>
+
+            <b>String to UpperCase: </b>
+            <p id="upper"></p>
+            <script>
+                let upper = text.toUpperCase();
+                document.getElementById("upper").innerHTML = upper; 
+            </script>
+
+            <b>string to lowercase: </b>
+            <p id="lower"></p>
+            <script>
+                let lower = text.toLowerCase();
+                document.getElementById("lower").innerHTML = lower; 
+            </script>
+
+
+            
+
+            
+        </section>
+        <section id="main-number">
+            <h2>Number Methods</h2>
+            <p>Number to be modified is 123.45678</p>
+
+            <b>Number to string: </b>
+            <p id="numstring"></p>
+            <script>
+                let number = 123.45678;
+                let numstring = number.toString();
+                document.getElementById("numstring").innerHTML = numstring; 
+            </script>
+
+            <b>Number to exponential: </b>
+            <p id="expo"></p>
+            <script>
+                let expo = number.toExponential(4);
+                document.getElementById("expo").innerHTML = expo; 
+            </script>
+
+            <b>Number to fixed number of decimal places: </b>
+            <p id="fixed"></p>
+            <script>
+                let fixed = number.toFixed(1);
+                document.getElementById("fixed").innerHTML = fixed; 
+            </script>
+
+            <b>Number to specified length: </b>
+            <p id="precision"></p>
+            <script>
+                let precision = number.toPrecision(2);
+                document.getElementById("precision").innerHTML = precision; 
+            </script>
+
+            <b>Number returned as a number: </b>
+            <p id="num"></p>
+            <script>
+                let num = number.valueOf();
+                document.getElementById("num").innerHTML = number.valueOf(); 
+            </script>
+            
+        </section> 
+
+        <section id="main-Array">
+            <h2>Array Methods</h2>
+            <p>Array to be modified is ["Bannana", 3, "Car", "Libary", 234]</p>
+
+            <b>Array length: </b>
+            <p id="aLength"></p>
+            <script>
+                const testArray = ["Bannana",3,"Car","Libary",234];
+                let alength = testArray.length;
+                document.getElementById("aLength").innerHTML = alength; 
+            </script>
+
+            <b>Array to string: </b>
+            <p id="aString"></p>
+            <script>
+                let aString = testArray.toString();
+                document.getElementById("aString").innerHTML = aString; 
+            </script>
+
+            <b>Remove last element from Array (pop): </b>
+            <p id="pop"></p>
+            <script>
+                let pop = testArray.pop();
+                document.getElementById("pop").innerHTML = "removed " + pop + ", array is now " + testArray; 
+            </script>
+
+            <b>Push element to array (added back 234 and "new"): </b>
+            <p id="push"></p>
+            <script>
+                let push = testArray.push(234, "new");
+                document.getElementById("push").innerHTML = testArray; 
+            </script>
+
+            <b>Put new element at beggining of array: </b>
+            <p id="unshift"></p>
+            <script>
+                let unshift = testArray.unshift("ice cream");
+                document.getElementById("unshift").innerHTML = testArray; 
+            </script>
+            
+
+
+
+            
+            
+        </section> 
+
+        <section id="main-Date">
+            <h2>Date Methods</h2>
+            <p id="Fulldate"></p>
+            <script>
+                const date = new Date();
+                document.getElementById("Fulldate").innerHTML = "date being used: " + date; 
+            </script>
+
+            <b>Year of current date: </b>
+            <p id="year"></p>
+            <script>
+                
+                const y = date.getFullYear();
+                document.getElementById("year").innerHTML = y; 
+            </script>
+
+            <b>Month of current date: </b>
+            <p id="month"></p>
+            <script>
+                const m = date.getMonth();
+                document.getElementById("month").innerHTML = m; 
+            </script>
+
+            <b>Day number of the week: </b>
+            <p id="day"></p>
+            <script>
+                const d = date.getDay();
+                document.getElementById("day").innerHTML = d; 
+            </script>
+
+            <b>Date day Today: </b>
+            <p id="Today"></p>
+            <script>
+                const Today = date.getDate();
+                document.getElementById("Today").innerHTML = Today; 
+            </script>
+
+            <b>Hours today: </b>
+            <p id="hours"></p>
+            <script>
+                const hours = date.getHours();
+                document.getElementById("hours").innerHTML = hours; 
+            </script>
+            
+        </section> 
+
+        <section id="main-Function">
+            <h2>Function Methods</h2>
+            <p>Press Button</p>
+            <button id="incrementButton">Increment</button>
+            <p>Times Called Function: <b><span id="numb">0</span></p></b>
+            <p>By scrolling you're calling a function that checks number of pixels scrolled down</p>
+            <b><p id="scrollPixels">0 pixels</p></b>
+            <br>
+            <br>
+            <br>
+
+
+            
+            
+        </section> 
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <footer>
+            <p>&copy; 2023 My Cool Website</p>
+        </footer>
+
+        <script>
+            let numb = 0;
+            
+            incrementButton.onclick = buttonPress;
+            function buttonPress(){ 
+                const incrementButton = document.getElementById('incrementButton');
+                const numberElement = document.getElementById('numb');
+                       
+                // Increment the number
+                numb++;
+                // Update the number displayed in the text
+                numberElement.textContent = numb;
+            }
+            
+             // Function to update scroll distance
+            function updateScrollDistance() {
+                // Get a reference to the element where we will display the scroll distance
+                const scrollPixelsElement = document.getElementById('scrollPixels');
+
+                // Get the current scroll position in pixels
+                const scrollPixels = window.scrollY;
+
+                // Update the content of the element with the scroll distance
+                scrollPixelsElement.textContent = `${scrollPixels} pixels`;
+            }
+
+            // Call the function to set the initial scroll distance
+            updateScrollDistance();
+
+            // scroll listener
+            window.addEventListener('scroll', updateScrollDistance);
+
+        </script>
+        
+
+    </body>
+
+</html>
